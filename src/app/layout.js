@@ -1,5 +1,6 @@
+import Navigation from '@/components/navigation/navigation'
 import './globals.css'
-import { oswaldFont } from '@/utils/fonts';
+import { oswaldFont } from '@/utils/fonts'
 
 export const metadata = {
   title: 'MediaCollege Denmark',
@@ -8,8 +9,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={oswaldFont.className}>
+        <Navigation></Navigation>
         {children}
       </body>
     </html>
