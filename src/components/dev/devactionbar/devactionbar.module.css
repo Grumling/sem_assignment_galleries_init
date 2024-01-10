@@ -13,3 +13,7 @@
   background-color: var(--box-color);
   cursor: pointer;
 }
+
+.status {
+  margin-top: 20px;
+}
