@@ -25,6 +25,7 @@
 html,
 body {
   background-color: var(--main-color);
+  height: 100%;
 }
 
 body {

@@ -6,6 +6,8 @@ export default async function Page() {
     <main className={styles.page}>
       Assignments
       <DevIcons />
+      <DevIcons />
+      <DevIcons />
     </main>
   )
 }
