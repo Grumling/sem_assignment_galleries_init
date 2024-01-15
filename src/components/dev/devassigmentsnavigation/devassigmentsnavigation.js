@@ -16,6 +16,10 @@ const DevAssignmentsNavigation = () => {
             link={'/assignments/data/authors'}
             title={'authors'}
           />
+          <DevAssignmentsNavBtn
+            link={'/assignments/data/images'}
+            title={'images'}
+          />
         </div>
       </div>
     </div>
