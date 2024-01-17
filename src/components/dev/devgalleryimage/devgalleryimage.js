@@ -5,16 +5,15 @@ import styles from './devGalleryImage.module.css'
 import DevImageMeta from '../devimagemeta/devimagemeta'
 import { FaMagnifyingGlass } from 'react-icons/fa6'
 
-const DevGalleryImage = ({ image, showMeta = false }) => {
+// Define a functional React component named DevGalleryImage, which takes two props: image and showMeta
+const DevGalleryImage = ({ image = false }) => {
+  // Initialize state for managing the visibility of details
   const [isDetailsVisible, setDetailsVisible] = useState(false)
 
+  // Define a function to toggle the visibility of details
   const handleToggleDetails = () => {
     setDetailsVisible(!isDetailsVisible)
   }
-
-  let displayDetails = showMeta ? (
-    <DevImageMeta meta={image.meta}></DevImageMeta>
-  ) : null
 
   return (
     <div>
@@ -26,7 +25,11 @@ const DevGalleryImage = ({ image, showMeta = false }) => {
         height={image.height}
       />
       {/* DisplayDetails er DevImageMeta */}
-      {isDetailsVisible && displayDetails}
+      {isDetailsVisible ? (
+        <DevImageMeta meta={image.meta}></DevImageMeta>
+      ) : (
+        'Nej'
+      )}
       <FaMagnifyingGlass onClick={handleToggleDetails} />
     </div>
   )
