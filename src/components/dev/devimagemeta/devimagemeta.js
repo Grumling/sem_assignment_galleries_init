@@ -1,5 +1,5 @@
 const DevImageMeta = ({ meta }) => {
-  console.log('TESTTTTEETETETETETET', meta)
+  /* console.log('TESTTTTEETETETETETET', meta) */
 
   const {
     ISO,

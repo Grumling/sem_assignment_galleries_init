@@ -1,14 +1,13 @@
-import Link from 'next/link'
+import { fetchAuthorByNicUrl } from '@/lib/data.service'
 import styles from './page.module.css'
+import DevAuthorPortfolio from '@/components/dev/devauthorportfolio/devauthorportfolio'
 
 export default async function Page({ params }) {
+  let author = await fetchAuthorByNicUrl(params.author)
+
   return (
     <main className={styles.page}>
-      <h1>Portfolio</h1>
-      <h2>Author: {params.author}</h2>
-      <Link href='/galleries' alt='Lena Riis - Portfolio'>
-        Tilbage til gallerierne
-      </Link>
+      <DevAuthorPortfolio author={author} />
     </main>
   )
 }

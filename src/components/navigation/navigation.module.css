@@ -1,6 +1,8 @@
 .container {
   position: fixed;
   width: 100%;
+  z-index: 100; /* <- Vi løfter navigation op over alle andre elementer hvor z-index er mindre end 100. */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* så ser det lidt pænere ud */
 }
 
 .navBar {

@@ -25,11 +25,7 @@ const DevGalleryImage = ({ image = false }) => {
         height={image.height}
       />
       {/* DisplayDetails er DevImageMeta */}
-      {isDetailsVisible ? (
-        <DevImageMeta meta={image.meta}></DevImageMeta>
-      ) : (
-        'Nej'
-      )}
+      {isDetailsVisible ? <DevImageMeta meta={image.meta}></DevImageMeta> : ''}
       <FaMagnifyingGlass onClick={handleToggleDetails} />
     </div>
   )

@@ -4,6 +4,11 @@
 
   /* Component Specific Variables */
   --box-color: #fff;
+
+  /* Navigation */
+  --navigation-background-color: rgb(0, 0, 0);
+  --navigation-logo-background-color: rgb(255, 255, 255);
+  --navigation-color: rgb(255, 255, 255);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +18,11 @@
 
     /* Component Specific Variables */
     --box-color: rgb(235, 235, 160);
+
+    /* Navigation */
+    --navigation-background-color: rgb(235, 235, 160);
+    --navigation-logo-background-color: rgb(255, 255, 255);
+    --navigation-color: rgb(0, 0, 0);
   }
 }
 

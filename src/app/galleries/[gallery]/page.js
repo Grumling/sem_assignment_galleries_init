@@ -1,14 +1,15 @@
-import Link from 'next/link'
+import DevAuthorHero from '@/components/dev/devauthorhero/devauthorhero'
+import { fetchAuthorsByGalleryName } from '@/lib/data.service'
 import styles from './page.module.css'
 
 export default async function Page({ params }) {
+  const authors = await fetchAuthorsByGalleryName(params.gallery)
+
   return (
     <main className={styles.page}>
-      <h1>Portfolio´s</h1>
-      <h2>Gallery: {params.gallery}</h2>
-      <Link href='/galleries/umbra/lena-riis' alt='Til Lena Riis portfolio'>
-        Lena Riis
-      </Link>
+      {authors.map((author, index) => {
+        return <DevAuthorHero key={index} author={author}></DevAuthorHero>
+      })}
     </main>
   )
 }

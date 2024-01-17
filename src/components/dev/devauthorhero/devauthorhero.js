@@ -1,6 +1,10 @@
 import DevDebugJson from '../devdebugjson/devdebugjson'
 import styles from './devauthorhero.module.css'
+import Link from 'next/link'
+
 const DevAuthorHero = ({ author }) => {
+  let url = `/galleries/${author.gallery}/${author.niceUrl}`
+
   return (
     <>
       <div className={styles.hero}>
@@ -9,7 +13,7 @@ const DevAuthorHero = ({ author }) => {
             <div>{author.author.split('')[0]}</div>
           </div>
           <div className={styles.text}>
-            <h2>{author.author}</h2>
+            <Link href={url}>{author.author}</Link>
             <p>{author.gallery}</p>
           </div>
         </div>
